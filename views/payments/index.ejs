@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/819572615521107988/831534161755635722/1550868149376.png" style="border-radius: 10px;">
+  </head>
+  <body>
+    <%- include('../header'); -%>
+  <div class="d-flex justify-content-center command_head" style="margin-top: 200px;">
+      <h1> 상점 </h1>
+  </div>
+  <div class="container" style="text-align: center; margin-top: 40px; margin-bottom: 50px;">
+    <script type="text/javascript" >
+      if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent))
+      {(function(){document.writeln('<iframe width="320" height="50" allowtransparency="true" src="https://mtab.clickmon.co.kr/pop/wp_m_320.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1085997%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');})();}
+      else{(function(){document.writeln('<iframe width="728" height="90" allowtransparency="true" src="https://tab2.clickmon.co.kr/pop/wp_ad_728.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1085997%7C%5E%7CAdver_M_1046207&rt_ad_id_code=RTA_106578&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');})();}
+    </script>
+  <div class="container" style="background-color: gray; border-radius: 40px; display: block;">
+    <% if (user) { %>
+      <h2 style="border-radius: 10px;"><%- user.tag %> <p id="userid"><%- user.id %></p></h2>
+      <button type="button" class="btn btn-dark" id="logout" style="margin-top: 7px; margin-bottom: 7px;">로그아웃</button>
+      <div class="container" style="text-align: center;">
+        <div class="row">
+          <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
+            <h2 style="margin-top: 10px;">500AU</h2>
+            <div class="imgclass">
+              <img class="imageclass" src="https://cdn.discordapp.com/attachments/819572615521107988/837960653091504168/2032152.png">
+            </div>
+            <h4>500원</h4>
+            <button type="button" class="btn btn-dark" id="payment-button-1" > 구매하기</button>
+          </div>
+          <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
+            <h2 style="margin-top: 10px;">1000AU</h2>
+            <div class="imgclass">
+              <img class="imageclass" src="https://cdn.discordapp.com/attachments/819572615521107988/837960653091504168/2032152.png">
+            </div>
+            <h4>1000원</h4>
+            <button type="button" class="btn btn-dark" id="payment-button-2">구매하기</button>
+          </div>
+          <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
+            <h2 style="margin-top: 10px;">10000AU</h2>
+            <div class="imgclass">
+              <img class="imageclass" src="https://cdn.discordapp.com/attachments/819572615521107988/837960653091504168/2032152.png">
+            </div>
+            <h4>10000원</h4>
+            <button type="button" class="btn btn-dark" id="payment-button-3">구매하기</button>
+          </div>
+        </div>
+      
+        </div>
+      </div>
+  <% } else { %>
+    <button type="button" class="btn btn-dark" id="login" style="margin-top: 7px; margin-bottom: 7px;">로그인</button>
+    <div class="d-flex justify-content-center command_head">
+      <h1> 로그인후 이용해주세요 </h1>
+  </div>
+  <% } %>
+</div>
+</div>
+
+  <div class="container" style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
+    <script type="text/javascript">
+        if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent)) { (function () { document.writeln('<iframe width="320" height="50" allowtransparency="true" src="https://mtab.clickmon.co.kr/pop/wp_m_320.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1085997%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>'); })(); }
+        else { (function () { document.writeln('<iframe width="728" height="90" allowtransparency="true" src="https://tab2.clickmon.co.kr/pop/wp_ad_728.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1085997%7C%5E%7CAdver_M_1046207&rt_ad_id_code=RTA_106578&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>'); })(); }
+    </script>
+</div>
+    <%- include('../footer'); -%>
+  </body>
+</html>
+
+<script>
+  var login = document.getElementById("login");
+  login.addEventListener("click", function () {
+    window.location = "/authorize"
+  });
+</script>
+<script>
+  var logout = document.getElementById("logout");
+  logout.addEventListener("click", function () {
+    window.location = "authorize/logout"
+  });
+</script>
+
+<script src="https://js.tosspayments.com/v1"></script>
+    <script>
+      const { PatmentsKey } = require('../config.json');
+
+      var userid = document.getElementById("userid").innerText
+      
+      var tossPayments = TossPayments(PatmentsKey);
+
+      var button1 = document.getElementById("payment-button-1");
+
+      button1.addEventListener("click", function () {
+        tossPayments
+          .requestPayment("카드", {
+            amount: 500,
+            orderId: "<%= orderId %>",
+            orderName: "500AU",
+            customerName: userid,
+            successUrl: window.location.origin + "/success",
+            failUrl: window.location.origin + "/fail",
+            __v3__: false,
+          })
+          .catch(function (error) {
+            if (error.code === "USER_CANCEL") {
+              // 취소 관련 처리
+            }
+          });
+      });
+      var tossPayments = TossPayments(PatmentsKey);
+
+      var button2 = document.getElementById("payment-button-2");
+
+      button2.addEventListener("click", function () {
+        tossPayments
+          .requestPayment("카드", {
+            amount: 1000,
+            orderId: "<%= orderId %>",
+            orderName: "1000AU",
+            customerName: userid,
+            successUrl: window.location.origin + "/success",
+            failUrl: window.location.origin + "/fail",
+            __v3__: false,
+          })
+          .catch(function (error) {
+            if (error.code === "USER_CANCEL") {
+              // 취소 관련 처리
+            }
+          });
+      });
+      var tossPayments = TossPayments(PatmentsKey);
+
+      var button3 = document.getElementById("payment-button-3");
+
+      button3.addEventListener("click", function () {
+        tossPayments
+          .requestPayment("카드", {
+            amount: 10000,
+            orderId: "<%= orderId %>",
+            orderName: "10000AU",
+            customerName: userid,
+            successUrl: window.location.origin + "/success",
+            failUrl: window.location.origin + "/fail",
+            __v3__: false,
+          })
+          .catch(function (error) {
+            if (error.code === "USER_CANCEL") {
+              // 취소 관련 처리
+            }
+          });
+      });
+  </script>
+    
+    <script src="https://js.tosspayments.com/v1/openpay"></script>
+    <script>
+      window.addEventListener("message", function (event) {
+        console.log(JSON.stringify(event.data));
+      });
+
+      var connectpay = OpenPay(
+        PatmentsKey,
+        "hyunseob-15",
+        {
+          redirectUrl: "http://localhost:8080/callback_auth"
+        }
+      );
+
+      var connectpay = OpenPay(
+        PatmentsKey,
+        "hyunseob-15",
+        {
+          redirectUrl: "http://localhost:8080/callback_auth",
+        }
+      );
+
+      var button1 = document.getElementById("payment-button-1");
+
+      button1.addEventListener("click", function () {
+        connectpay.requestPayment({
+          amount: 500,
+          orderId: "<%= orderId %>",
+          orderName: "500AU",
+          successUrl: window.location.origin + "/success",
+          failUrl: window.location.origin + "/fail",
+        });
+      });
+
+      var button2 = document.getElementById("payment-button-2");
+
+      button2.addEventListener("click", function () {
+        connectpay.requestPayment({
+          amount: 1000,
+          orderId: "<%= orderId %>",
+          orderName: "1000AU",
+          successUrl: window.location.origin + "/success",
+          failUrl: window.location.origin + "/fail",
+        });
+      });
+      var button3 = document.getElementById("payment-button-3");
+
+      button3.addEventListener("click", function () {
+        connectpay.requestPayment({
+          amount: 10000,
+          orderId: "<%= orderId %>",
+          orderName: "10000AU",
+          successUrl: window.location.origin + "/success",
+          failUrl: window.location.origin + "/fail",
+        });
+      });
+    </script>

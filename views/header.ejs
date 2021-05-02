@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-color">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ntoggle" aria-controls="ntoggle" aria-expanded="false" aria-label="Toggle navigation" style="margin-bottom: 10px;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="ntoggle">
+            <a class="navbar-brand" href="/">
+            <img src="https://cdn.discordapp.com/attachments/819572615521107988/831534161755635722/1550868149376.png" alt="아유" width="30" height="30" class="d-inline-block align-top">
+            <b>아유</b>
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/commands">
+                    명령어</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" onclick="invite();">
+                    초대</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://discord.gg/YvWPf5UsVZ">
+                    서포트 서버</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/status">
+                    서버상태</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/donate">
+                    후원</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<script>
+    function invite() {
+        window.open('https://discord.com/api/oauth2/authorize?client_id=775351568396320799&permissions=8&scope=bot','pop1','width=400,height=650,location=no,status=no');
+    }
+</script>

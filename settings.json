@@ -1,0 +1,296 @@
+{
+  "website" : {
+    "name": "아유",
+    "avatar": "https://cdn.discordapp.com/avatars/450634297871695896/a_28de95f4da55d1367d24b8197b2f0956.gif?size=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=815484747140038666&permissions=8&scope=bot"
+  },
+
+  "commands" : {
+    "기본": [{
+      "name": "도움말",
+      "category": "기본",
+      "description": "기본적인 명령어를 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": ["!명령어"],
+      "usage": "!도움말"
+    }, {
+      "name": "정보",
+      "category": "정보",
+      "description": "저에 대한 정보를 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!정보"
+    }, {
+      "name": "초대",
+      "category": "기본",
+      "description": "당신이 관리하는 서버에 저를 서버에 초대할 수 있어요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!초대"
+    }, {
+      "name": "자바버전",
+      "category": "기본",
+      "description": "서버에 설치된 자바 버전을 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!자바"
+    }, {
+      "name": "버전",
+      "category": "기본",
+      "description": "관련 모듈 버전을 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!버전"
+    }, {
+      "name": "핑",
+      "category": "기본",
+      "description": "핑 속도를 측정해요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!핑"
+    }, {
+      "name": "언어변경",
+      "category": "기본",
+      "description": "언어를 변경해요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!language <언어팩 이름>"
+    }, {
+      "name": "언어팩목록",
+      "category": "기본",
+      "description": "사용가능한 언어팩을 확인해요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!language"
+    }],
+    "학교": [{
+      "name": "자가진단",
+      "category": "학교",
+      "description": "설정을 해두시면 매일 아침 7시경에 자동으로 자가 진단이 수행되요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!자가진단설정 <이름> <생년월일6자> <지역> <학교급> <학교> <비밀번호>"
+    }, {
+      "name": "학교급식",
+      "category": "학교",
+      "description": "학교 급식을 알려줘요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!급식 <학교이름> <날짜> (날짜 미입력시 오늘로 자동지정됩니다)"
+    }],
+    "유틸리티": [{
+      "name": "MP3변환",
+      "category": "유틸리티",
+      "description": "노래제목 또는 유튜브링크를 MP3파일로 변환해줘요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!변환 <노래제목> 또는 <유튜브링크>"
+    }, {
+      "name": "단축주소",
+      "category": "유틸리티",
+      "description": "링크를 짧은주소와 QR코드로 만들어줘요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!단축주소 <링크>"
+    }, {
+      "name": "팀섞기",
+      "category": "유틸리티",
+      "description": "이름들을 이용하여 2팀으로 섞어줍니다!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!팀섞 <이름1> <이름2> ..."
+    }, {
+      "name": "팀섞기음성채널",
+      "category": "유틸리티",
+      "description": "음성채널의 입장한 유저들을 2팀으로 섞어줍니다!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!팀섞음성"
+    }, {
+      "name": "프로필",
+      "category": "유틸리티",
+      "description": "언급된 유저의 프로필을 보여줍니다!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!프로필 <언급> 또는 <디스코드 ID>"
+    },{
+      "name": "이모지생성",
+      "category": "유틸리티",
+      "description": "내용을 이용하여 최대 4글자 이모지를 만듭니다",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!이모지생성 <내용>"
+    }, {
+      "name": "주소검색",
+      "category": "유틸리티",
+      "description": "장소의 주소와 가는길을 알려드립니다",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!주소검색 <장소>"
+    }, {
+      "name": "코로나",
+      "category": "유틸리티",
+      "description": "코로나 국내 발생현황을 알려드립니다",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!주소검색"
+    }, {
+      "name": "멜론차트",
+      "category": "유틸리티",
+      "description": "멜론차트 1위부터 10위까지 알려드려요!",
+      "permissions": ["이모지생성"],
+      "aliases": [],
+      "usage": "!이모지생성 <들어갈 글자>"
+    }, {
+      "name": "빌보드차트",
+      "category": "유틸리티",
+      "description": "빌보드차트 1위부터 10위까지 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!빌보드차트"
+    }],
+    "전적": [{
+      "name": "롤전적",
+      "category": "전적",
+      "description": "<소환사 닉네임>님의 롤 전적을 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!롤전적 <소환사 닉네임>"
+    }],
+    "음악": [{
+      "name": "연결",
+      "category": "음악",
+      "description": "음성 채널에 접속해요!",
+      "permissions": ["유저명령어"],
+      "aliases": ["!들어와", "!ㅊ"],
+      "usage": "!연결"
+    }, {
+      "name": "재생",
+      "category": "음악",
+      "description": "음악을 재생해요!",
+      "permissions": ["유저명령어"],
+      "aliases": ["!ㅔ"],
+      "usage": "!재생 [음악 이름 혹은 Youtube 링크]"
+    }, {
+      "name": "정지",
+      "category": "음악",
+      "description": "음성 채널을 나갑니다.",
+      "permissions": ["유저명령어"],
+      "aliases": ["!연결해제","!나가", "!중지"],
+      "usage": "!정지"
+    }, {
+      "name": "스킵",
+      "category": "음악",
+      "description": "다음 곡으로 넘어갑니다!",
+      "permissions": ["유저명령어"],
+      "aliases": ["!ㄴ"],
+      "usage": "!스킵 (뛰어넘을 곡 수)"
+    }, {
+      "name": "음량",
+      "category": "음악",
+      "description": "음량을 조절합니다!",
+      "permissions": ["유저명령어"],
+      "aliases": ["!ㅍ", "!볼륨"],
+      "usage": "!음량 (1~1000)"
+    }, {
+      "name": "현재재생중",
+      "category": "음악",
+      "description": "현재 재생중인 곡을 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": ["!ㅜ"],
+      "usage": "!현재재생중"
+    }, {
+      "name": "재생목록",
+      "category": "음악",
+      "description": "재생목록 리스트의 (페이지 수)의 페이지에 있는 재생목록을 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": ["!ㅂ"],
+      "usage": "!큐 (페이지 수)"
+    }, {
+      "name": "일시정지",
+      "category": "음악",
+      "description": "음악을 일시정지해요 !일시정지를 한번더하면 다시재생되요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!일시정지"
+    }, {
+      "name": "반복",
+      "category": "음악",
+      "description": "현재 듣고 계시는 노래를 포함한 재생목록의 모든 노래를 반복해서 들려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": ["!ㅣ"],
+      "usage": "!반복"
+    }, {
+      "name": "셔플",
+      "category": "음악",
+      "description": "다음 곡부터 재생목록의 음악들이 랜덤으로 나와요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!셔플"
+    }, {
+      "name": "탐색",
+      "category": "음악",
+      "description": "음악을 명령어 뒤의 숫자만큼 초단위로 진행시간을 조절해요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!탐색 [+(초) 혹은 -(초)]"
+    }, {
+      "name": "제거",
+      "category": "음악",
+      "description": "재생목록에서 음악을 제거해요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!제거 [재생목록에서의 음악 순서 번호]"
+    }, {
+      "name": "유튜브",
+      "category": "음악",
+      "description": "Youtube 에서 음악을 검색하고 결과를 알려드려요!",
+      "permissions": ["유저명령어"],
+      "aliases": [],
+      "usage": "!유튜브 [검색하실 음악명]"
+    }, {
+      "name": "멜론차트재생",
+      "category": "음악",
+      "description": "멜론 차트 원하는 순위까지의 곡을 재생목록에 추가합니다!(최대 10위)",
+      "permissions": ["유저명령어"],
+      "aliases": ["!멜론음악","!멜론차트재생"],
+      "usage": "!멜론재생"
+    }, {
+      "name": "빌보드차트재생",
+      "category": "음악",
+      "description": "빌보드 차트 원하는 순위까지의 곡을 재생목록에 추가합니다!(최대 10위)",
+      "permissions": ["유저명령어"],
+      "aliases": ["!빌보드음악", "!빌보드차트재생"],
+      "usage": "!빌보드재생 (~위까지)"
+    }],
+    "관리자": [{
+      "name": "경고",
+      "category": "관리자",
+      "description": "언급된 유저에게 경고를 부여해요!",
+      "permissions": ["서버관리"],
+      "aliases": [],
+      "usage": "!경고 <언급> 또는 <유저아이디> <사유>"
+    }, {
+      "name": "경고삭제",
+      "category": "관리자",
+      "description": "언급된 유저의 <경고ID> 를 삭제해요! (경고ID는 !누적경고 <언급> 또는 <유저아이디>로 확인가능해요!)",
+      "permissions": ["서버관리"],
+      "aliases": [],
+      "usage": "!경고삭제 <언급> or <유저아이디> <경고ID>"
+    }, {
+      "name": "누적경고",
+      "category": "관리자",
+      "description": "언급된 유저의 누적경고를 확인해요!",
+      "permissions": ["서버관리"],
+      "aliases": [],
+      "usage": "!누적경고 <언급> 또는 <유저아이디>"
+    }, {
+      "name": "경고정보",
+      "category": "관리자",
+      "description": "<경고ID>의 경고 정보를 확인해요! (경고ID는 !누적경고 <언급> 또는 <유저아이디>로 확인가능해요!)",
+      "permissions": ["서버관리"],
+      "aliases": [],
+      "usage": "!경고정보 <경고ID>"
+    }]
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>오류발생</title>
+    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/819572615521107988/831534161755635722/1550868149376.png" style="border-radius: 10px;">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <%- include('../header'); -%>
+  <div class="d-flex justify-content-center command_head" style="margin-top: 200px;">
+      <h1> 결제의 오류가 발생했습니다 </h1>
+      <h2> <%- message %> </h2>
+      <h2> <%- code %> </h2>
+  </div>
+  
+  <div class="container" style="text-align: center; margin-top: 50px; margin-bottom: 400px;">
+    <script type="text/javascript">
+        if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent)) { (function () { document.writeln('<iframe width="320" height="50" allowtransparency="true" src="https://mtab.clickmon.co.kr/pop/wp_m_320.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1085997%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>'); })(); }
+        else { (function () { document.writeln('<iframe width="728" height="90" allowtransparency="true" src="https://tab2.clickmon.co.kr/pop/wp_ad_728.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1085997%7C%5E%7CAdver_M_1046207&rt_ad_id_code=RTA_106578&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>'); })(); }
+    </script>
+  </div>
+    <%- include('../footer'); -%>
+  </body>
+</html>
