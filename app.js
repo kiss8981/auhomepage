@@ -12,7 +12,7 @@ const apiRouter = require('./routes/api');
 const shopRouter = require('./routes/payment');
 const session = require('express-session');
 
-const domain = "audiscordbot.xyz"
+const { domain } = require('./config.json');
 
 // view engine setup
 

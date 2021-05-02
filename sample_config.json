@@ -1,9 +1,10 @@
 {
-    "clientId": "705826239474171915", 
-    "clientSecret": "I8M3bC4aYNgPj9Rypcxvcriy1Uyrvo7O", 
+    "clientId": "Discord clientId",
+    "clientSecret": "Discord clientSecret",
     "scopes": ["identify", "email"],
-    "redirectUri": "http://shop.audiscordbot.xyz:8080/authorize/callback",
-    "secretKey": "test_sk_GKNbdOvk5rk5OvwEzw23n07xlzmj",
-    "DBUrl": "mongodb://192.168.0.13:27017/aubot",
-    "login_token": "kiss850501"
+    "redirectUri": "Discord redirectUri",
+    "DBUrl": "mongoDB URL",
+    "login_token": "API login_token",
+    "secretKey": "TOSS PayMents secretKey",
+    "domain": "localhost"
 }
