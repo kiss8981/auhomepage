@@ -67,15 +67,15 @@ router.get("/success", function (req, res) {
             console.log("result: fail");
             return;
         }
-    
         console.log(`result: okay , orderid: ${jsonObj.orderId}`);
-    
       });
+      
       res.render("../views/payments/success", {
         title: "구매 완료",
         orderId: jsonObj.orderId,
         amount: jsonObj.totalAmount,
         receiptUrl: jsonObj.card.receiptUrl,
+        user: req.session.user || null,
       });
     })
     .catch(function (failResponse) {
@@ -88,31 +88,6 @@ router.get("/fail", function (req, res) {
     message: req.query.message,
     code: req.query.code,
   });
-});
-
-router.get("/iframe/replace", function (req, res) {
-  res.setHeader("Content-Type", `text/html`);
-  res.send(`
-    <iframe src="https://replace-or-redirect.herokuapp.com/replace" />
-  `);
-});
-
-router.get("/iframe/redirect", function (req, res) {
-  res.setHeader("Content-Type", `text/html`);
-  res.send(`
-    <iframe src="https://replace-or-redirect.herokuapp.com/redirect" />
-  `);
-});
-
-router.get("/replace", function (req, res) {
-  res.setHeader(`Content-Type`, "text/html");
-  res.send(`
-    <script>window.location.replace('https://b4b27d4a6aa8.ap.ngrok.io/replaced')</script>
-  `);
-});
-
-router.get("/redirect", function (req, res) {
-  res.redirect(`https://b4b27d4a6aa8.ap.ngrok.io/replaced`);
 });
 
 router.get("/replaced", function (req, res) {

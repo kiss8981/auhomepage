@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>아유 - 상점</title>
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
     <meta
       name="viewport"
@@ -15,14 +15,14 @@
   </head>
   <body>
     <%- include('../header'); -%>
-  <div class="d-flex justify-content-center command_head" style="margin-top: 200px;">
+  <div class="d-flex justify-content-center command_head" style="margin-top: 200px; margin-bottom: 10px;">
       <h1> 구매해 주셔서 감사합니다 </h1>
   </div>
   
   <div class="container" style="text-align: center;">
-    <h1>현재 보유 중인 포인트 : <%= amount %></h1>
-    <h2>주문번호 : <%= orderId %></h2>
-    <h3>위 번호를 디스코드에서 등록 해주세요</h3>
+    <h1><%= user.username %>님이 구매하신 포인트 : <%= amount %>AU</h1>
+    <h3 style="margin-top: 30px;">아래 명령어를 디스코드에서 입력해주세요</h3>
+    <code style="font-size: 20px;">!등록 <%= orderId %></code>
   </div>
   <div class="container" style="text-align: center; margin-top: 300px; margin-bottom: 200px;">
     <script type="text/javascript">

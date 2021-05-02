@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>아유 - 상점</title>
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
     <meta
       name="viewport"
@@ -19,15 +19,15 @@
       <h1> 상점 </h1>
   </div>
   <div class="container" style="text-align: center; margin-top: 40px; margin-bottom: 50px;">
-    <script type="text/javascript" >
+    <script type="text/javascript">
       if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent))
       {(function(){document.writeln('<iframe width="320" height="50" allowtransparency="true" src="https://mtab.clickmon.co.kr/pop/wp_m_320.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1085997%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');})();}
       else{(function(){document.writeln('<iframe width="728" height="90" allowtransparency="true" src="https://tab2.clickmon.co.kr/pop/wp_ad_728.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1085997%7C%5E%7CAdver_M_1046207&rt_ad_id_code=RTA_106578&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');})();}
     </script>
-  <div class="container" style="background-color: gray; border-radius: 40px; display: block;">
+  <div class="container" style="background-color: #36393f; border-radius: 20px; display: block;  width: 100%; height: 100%; position: relative; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19); margin-top: 40px;">
     <% if (user) { %>
-      <h2 style="border-radius: 10px;"><%- user.tag %> <p id="userid"><%- user.id %></p></h2>
-      <button type="button" class="btn btn-dark" id="logout" style="margin-top: 7px; margin-bottom: 7px;">로그아웃</button>
+      <p style="font-size: 30px;"> <%- user.username %>님 안녕하세요!</p> <p id="userid" style="display: None;"><%- user.id %></p>
+      <span><p><button type="button" class="btn btn-dark" id="logout" style="margin-bottom: 7px; background-color: #212529; color: white; transition: all .2s ease-in-out;">로그아웃</button></p></span>
       <div class="container" style="text-align: center;">
         <div class="row">
           <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
@@ -36,7 +36,7 @@
               <img class="imageclass" src="https://cdn.discordapp.com/attachments/819572615521107988/837960653091504168/2032152.png">
             </div>
             <h4>500원</h4>
-            <button type="button" class="btn btn-dark" id="payment-button-1" > 구매하기</button>
+            <button type="button" class="btn btn-dark" id="payment-button-1" >구매하기</button>
           </div>
           <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
             <h2 style="margin-top: 10px;">1000AU</h2>
@@ -59,10 +59,7 @@
         </div>
       </div>
   <% } else { %>
-    <button type="button" class="btn btn-dark" id="login" style="margin-top: 7px; margin-bottom: 7px;">로그인</button>
-    <div class="d-flex justify-content-center command_head">
-      <h1> 로그인후 이용해주세요 </h1>
-  </div>
+    <button type="button" class="btn btn-dark" id="login" style="margin-top: 20px; background-color: #212529; color: white; transition: all .2s ease-in-out;">로그인</button>
   <% } %>
 </div>
 </div>
@@ -92,7 +89,7 @@
 
 <script src="https://js.tosspayments.com/v1"></script>
     <script>
-      const { PatmentsKey } = require('../config.json');
+      var PatmentsKey = "test_ck_N5OWRapdA8dGmREBGmbro1zEqZKL"
 
       var userid = document.getElementById("userid").innerText
       
