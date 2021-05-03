@@ -28,7 +28,12 @@
       <span><p><button type="button" class="btn btn-dark" id="logout" style="margin-bottom: 7px; background-color: #212529; color: white; transition: all .2s ease-in-out;">로그아웃</button></p></span>
       <div class="container" style="text-align: center;">
         <p>현제 테스트 중이므로 추후 초기화 예정입니다</p>
-        <p>구매는 가능하나 돈은 빠져나가지지 않습니다</p>
+        <p>실제 결제가 되지 않는 테스트 입니다</p>
+        <select class="form-select mb-3" id="orderType" style="width: 30%; margin: 0 auto;">
+          <option value="카드" selected>카드</option>
+          <option value="휴대폰">휴대폰</option>
+          <option value="문화상품권">문화상품권</option>
+        </select>
         <div class="row">
           <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
             <h2 style="margin-top: 10px;">500AU</h2>
@@ -73,7 +78,6 @@
     <%- include('../footer'); -%>
   </body>
 </html>
-
 <script>
   var login = document.getElementById("login");
   login.addEventListener("click", function () {
@@ -100,7 +104,7 @@
 
       button1.addEventListener("click", function () {
         tossPayments
-          .requestPayment("카드", {
+          .requestPayment(document.getElementById("orderType").value, {
             amount: 500,
             orderId: "<%= orderId %>",
             orderName: "500AU",
@@ -122,7 +126,7 @@
 
       button2.addEventListener("click", function () {
         tossPayments
-          .requestPayment("카드", {
+          .requestPayment(document.getElementById("orderType").value, {
             amount: 1000,
             orderId: "<%= orderId %>",
             orderName: "1000AU",
@@ -144,7 +148,7 @@
 
       button3.addEventListener("click", function () {
         tossPayments
-          .requestPayment("카드", {
+          .requestPayment(document.getElementById("orderType").value, {
             amount: 10000,
             orderId: "<%= orderId %>",
             orderName: "10000AU",

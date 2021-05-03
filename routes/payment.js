@@ -74,8 +74,7 @@ router.get("/success", function (req, res) {
         title: "구매 완료",
         orderId: jsonObj.orderId,
         amount: jsonObj.totalAmount,
-        receiptUrl: jsonObj.card.receiptUrl,
-        user: req.session.user || null,
+        user: req.session.user || null
       });
     })
     .catch(function (failResponse) {
