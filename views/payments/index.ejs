@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
-    <%- include('../header'); -%>
-      </script>
+          <%- include('../header'); -%>
+        </script> 
   <div class="d-flex justify-content-center command_head" style="margin-top: 200px;">
       <h1> 상점 </h1>
   </div>
@@ -24,9 +24,11 @@
     </script>
   <div class="container" style="background-color: #36393f; border-radius: 20px; display: block;  width: 100%; height: 100%; position: relative; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19); margin-top: 40px;">
     <% if (user) { %>
-      <p style="font-size: 30px;"> <%- user.username %>님 안녕하세요!</p> <p id="userid" style="display: None;"><%- user.id %></p>
+      <p style="font-size: 30px;"> <%- user.username %>님 안녕하세요!</p> <p id="userid" style="display: None;"><%- user.id %></p><p id="useremail" style="display: None;"><%- user.email %></p>
       <span><p><button type="button" class="btn btn-dark" id="logout" style="margin-bottom: 7px; background-color: #212529; color: white; transition: all .2s ease-in-out;">로그아웃</button></p></span>
       <div class="container" style="text-align: center;">
+        <p>현제 테스트 중이므로 추후 초기화 예정입니다</p>
+        <p>구매는 가능하나 돈은 빠져나가지지 않습니다</p>
         <div class="row">
           <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
             <h2 style="margin-top: 10px;">500AU</h2>
@@ -90,6 +92,7 @@
       var PatmentsKey = "test_ck_N5OWRapdA8dGmREBGmbro1zEqZKL"
 
       var userid = document.getElementById("userid").innerText
+      var useremail = document.getElementById("useremail").innerText
       
       var tossPayments = TossPayments(PatmentsKey);
 
@@ -102,6 +105,7 @@
             orderId: "<%= orderId %>",
             orderName: "500AU",
             customerName: userid,
+            customerEmail: useremail,
             successUrl: window.location.origin + "/success",
             failUrl: window.location.origin + "/fail",
             __v3__: false,
@@ -122,6 +126,7 @@
             amount: 1000,
             orderId: "<%= orderId %>",
             orderName: "1000AU",
+            customerEmail: useremail,
             customerName: userid,
             successUrl: window.location.origin + "/success",
             failUrl: window.location.origin + "/fail",
@@ -143,6 +148,7 @@
             amount: 10000,
             orderId: "<%= orderId %>",
             orderName: "10000AU",
+            customerEmail: useremail,
             customerName: userid,
             successUrl: window.location.origin + "/success",
             failUrl: window.location.origin + "/fail",
