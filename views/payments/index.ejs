@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>아유 - 상점</title>
+    <title>MOZI - 상점</title>
     <meta charset="utf-8">
     <script data-ad-client="ca-pub-2701426579223876" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +37,7 @@
         </select>
         <div class="row">
           <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
-            <h2 style="margin-top: 10px;">500AU</h2>
+            <h2 style="margin-top: 10px;">500MZ</h2>
             <div class="imgclass">
               <img class="imageclass" src="https://cdn.discordapp.com/attachments/819572615521107988/837960653091504168/2032152.png">
             </div>
@@ -45,15 +45,15 @@
             <button type="button" class="btn btn-dark" id="payment-button-1" >구매하기</button>
           </div>
           <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
-            <h2 style="margin-top: 10px;">1000AU</h2>
+            <h2 style="margin-top: 10px;">1000MZ</h2>
             <div class="imgclass">
               <img class="imageclass" src="https://cdn.discordapp.com/attachments/819572615521107988/837960653091504168/2032152.png">
             </div>
-            <h4>1000원</h4>
+            <h4>5000원</h4>
             <button type="button" class="btn btn-dark" id="payment-button-2">구매하기</button>
           </div>
           <div class="col-sm" style="margin-top: 10px; margin-bottom: 10px;">
-            <h2 style="margin-top: 10px;">10000AU</h2>
+            <h2 style="margin-top: 10px;">10000MZ</h2>
             <div class="imgclass">
               <img class="imageclass" src="https://cdn.discordapp.com/attachments/819572615521107988/837960653091504168/2032152.png">
             </div>
@@ -108,7 +108,7 @@
           .requestPayment(document.getElementById("orderType").value, {
             amount: 500,
             orderId: "<%= orderId %>",
-            orderName: "500AU",
+            orderName: "500MZ",
             customerName: userid,
             customerEmail: useremail,
             successUrl: window.location.origin + "/success",
@@ -128,9 +128,9 @@
       button2.addEventListener("click", function () {
         tossPayments
           .requestPayment(document.getElementById("orderType").value, {
-            amount: 1000,
+            amount: 5000,
             orderId: "<%= orderId %>",
-            orderName: "1000AU",
+            orderName: "5000MZ",
             customerEmail: useremail,
             customerName: userid,
             successUrl: window.location.origin + "/success",
@@ -152,7 +152,7 @@
           .requestPayment(document.getElementById("orderType").value, {
             amount: 10000,
             orderId: "<%= orderId %>",
-            orderName: "10000AU",
+            orderName: "10000MZ",
             customerEmail: useremail,
             customerName: userid,
             successUrl: window.location.origin + "/success",
@@ -195,7 +195,7 @@
         connectpay.requestPayment({
           amount: 500,
           orderId: "<%= orderId %>",
-          orderName: "500AU",
+          orderName: "500MZ",
           successUrl: window.location.origin + "/success",
           failUrl: window.location.origin + "/fail",
         });
@@ -205,9 +205,9 @@
 
       button2.addEventListener("click", function () {
         connectpay.requestPayment({
-          amount: 1000,
+          amount: 5000,
           orderId: "<%= orderId %>",
-          orderName: "1000AU",
+          orderName: "5000MZ",
           successUrl: window.location.origin + "/success",
           failUrl: window.location.origin + "/fail",
         });
@@ -218,7 +218,7 @@
         connectpay.requestPayment({
           amount: 10000,
           orderId: "<%= orderId %>",
-          orderName: "10000AU",
+          orderName: "10000MZ",
           successUrl: window.location.origin + "/success",
           failUrl: window.location.origin + "/fail",
         });
