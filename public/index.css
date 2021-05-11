@@ -4,6 +4,10 @@ body {
     height: 100%;
 }
 
+.ordercancel {
+    display: none;
+}
+
 .navbar-brand img {
     border-radius: 20px;
 }

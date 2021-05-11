@@ -117,7 +117,8 @@
           })
           .catch(function (error) {
             if (error.code === "USER_CANCEL") {
-              // 취소 관련 처리
+              alert("결제가 취소되었습니다")
+              location.reload()
             }
           });
       });
@@ -139,6 +140,8 @@
           })
           .catch(function (error) {
             if (error.code === "USER_CANCEL") {
+              alert("결제가 취소되었습니다")
+              location.reload()
               // 취소 관련 처리
             }
           });
@@ -161,12 +164,13 @@
           })
           .catch(function (error) {
             if (error.code === "USER_CANCEL") {
+              alert("결제가 취소되었습니다")
+              location.reload()
               // 취소 관련 처리
             }
           });
       });
   </script>
-    
     <script src="https://js.tosspayments.com/v1/openpay"></script>
     <script>
       window.addEventListener("message", function (event) {
