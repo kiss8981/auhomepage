@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const settings = require("../settings.json");
+const { bottoken } = require('../config.json');
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-client.login("ODE1NDg0NzQ3MTQwMDM4NjY2.YDtFWg.y0shzrv8kLJke9_h9_zrJGIKQYA")
+client.login(bottoken)
 
 /* GET home page. */
 function numberWithCommas(x) {

@@ -6,5 +6,6 @@
     "DBUrl": "mongoDB URL",
     "login_token": "API login_token",
     "secretKey": "TOSS PayMents secretKey",
-    "domain": "localhost"
+    "domain": "localhost",
+    "bottoken": "Discord Bot Token"
 }
