@@ -95,11 +95,10 @@
 <script src="https://js.tosspayments.com/v1"></script>
     <script>
       var PatmentsKey = "test_ck_N5OWRapdA8dGmREBGmbro1zEqZKL"
+      var tossPayments = TossPayments(PatmentsKey);
 
       var userid = document.getElementById("username").innerText
       var useremail = document.getElementById("useremail").innerText
-      
-      var tossPayments = TossPayments(PatmentsKey);
 
       var button1 = document.getElementById("payment-button-1");
 
@@ -122,7 +121,6 @@
             }
           });
       });
-      var tossPayments = TossPayments(PatmentsKey);
 
       var button2 = document.getElementById("payment-button-2");
 
@@ -146,7 +144,6 @@
             }
           });
       });
-      var tossPayments = TossPayments(PatmentsKey);
 
       var button3 = document.getElementById("payment-button-3");
 
@@ -171,60 +168,3 @@
           });
       });
   </script>
-    <script src="https://js.tosspayments.com/v1/openpay"></script>
-    <script>
-      window.addEventListener("message", function (event) {
-        console.log(JSON.stringify(event.data));
-      });
-
-      var connectpay = OpenPay(
-        PatmentsKey,
-        "hyunseob-15",
-        {
-          redirectUrl: "http://localhost:8080/callback_auth"
-        }
-      );
-
-      var connectpay = OpenPay(
-        PatmentsKey,
-        "hyunseob-15",
-        {
-          redirectUrl: "http://localhost:8080/callback_auth",
-        }
-      );
-
-      var button1 = document.getElementById("payment-button-1");
-
-      button1.addEventListener("click", function () {
-        connectpay.requestPayment({
-          amount: 500,
-          orderId: "<%= orderId %>",
-          orderName: "500MZ",
-          successUrl: window.location.origin + "/success",
-          failUrl: window.location.origin + "/fail",
-        });
-      });
-
-      var button2 = document.getElementById("payment-button-2");
-
-      button2.addEventListener("click", function () {
-        connectpay.requestPayment({
-          amount: 5000,
-          orderId: "<%= orderId %>",
-          orderName: "5000MZ",
-          successUrl: window.location.origin + "/success",
-          failUrl: window.location.origin + "/fail",
-        });
-      });
-      var button3 = document.getElementById("payment-button-3");
-
-      button3.addEventListener("click", function () {
-        connectpay.requestPayment({
-          amount: 10000,
-          orderId: "<%= orderId %>",
-          orderName: "10000MZ",
-          successUrl: window.location.origin + "/success",
-          failUrl: window.location.origin + "/fail",
-        });
-      });
-    </script>
